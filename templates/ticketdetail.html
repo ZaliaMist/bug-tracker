@@ -1,0 +1,27 @@
+<h1>TicketDetail Page:</h1>
+
+<p>
+   <a href="/">Home |</a>
+   <a href="/addticket/">AddTicket |</a>
+   <a href="/logout/">Logout |</a>
+   <a href="/assign/{{ticket.id}}">Assign Ticket To Yourself |</a>
+   <a href="/completed/{{ticket.id}}">Mark As Completed |</a>
+   <a href="/invalid/{{ticket.id}}">Mark As Invalid |</a>
+</p>
+
+
+<div>
+   <br>
+   <h1>Title: <a href="/ticketdetail/{{ticket.id}}/">{{ticket.title}}</a></h1>
+   <p>Time Created: {{ticket.time}}</p>
+   <p>Description: {{ticket.description}}</p>
+   <p>
+      Created By: 
+      <a href="/userdetail/{{user.id}}">
+         {{ticket.created_by}}
+      </a>
+   </p>
+   <p>Status: {{ticket.choose_stat}}</p>
+   <p>Assigned To: {{ticket.user_assigned_to_ticket}}</p>
+   <p>Completed By: {{ticket.user_completed_ticket}}</p>   
+</div>

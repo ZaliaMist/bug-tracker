@@ -1,0 +1,51 @@
+<h1>Homepage:</h1>
+
+<p>
+   <a href="/">Home</a>
+   <a href="/addticket/">AddTicket</a>
+   <a href="/logout/">Logout</a>
+</p>
+<br>
+
+<h2>New Tickets: </h2>
+<div>
+    {% for ticket in new_tickets %}
+            <h4>Title: <a href="/ticketdetail/{{ticket.id}}/">{{ticket.title}}</a></h4>
+            <p>Ticket Status: {{ticket.choose_stat}}</p>
+            <p>Created By: <a href="/userdetail/{{user.id}}">{{ticket.created_by}}</a></p>
+            <br>
+    {% endfor %}
+</div>
+
+<h2>Done Tickets: </h2>
+<div>
+    {% for ticket in completed_tickets %}
+            <h4>Title: <a href="/ticketdetail/{{ticket.id}}/">{{ticket.title}}</a></h4>
+            <p>Description: {{ticket.description}}</p>
+            <p>Ticket Status:{{ticket.choose_stat}}</p>
+            <p>Created By: <a href="/userdetail/{{user.id}}">{{ticket.created_by}}</a></p>
+            <br>
+    {% endfor %}
+</div>
+
+<h2>In Progress Tickets: </h2>
+<div>
+    {% for ticket in in_progress %}
+            <h4>Title: <a href="/ticketdetail/{{ticket.id}}/">{{ticket.title}}</a></h4>
+            <p>Description: {{ticket.description}}</p>
+            <p>Ticket Status:{{ticket.choose_stat}}</p>
+            <p>Created By: <a href="/userdetail/{{user.id}}">{{ticket.created_by}}</a></p>
+            <br>
+    {% endfor %}
+</div>
+
+<h2>Invalid Tickets: </h2>
+<div>
+    {% for ticket in invalid %}
+            <h4>Title: <a href="/ticketdetail/{{ticket.id}}/">{{ticket.title}}</a></h4>
+            <p>Description: {{ticket.description}}</p>
+            <p>Ticket Status:{{ticket.choose_stat}}</p>
+            <p>Created By: <a href="/userdetail/{{user.id}}">{{ticket.created_by}}</a></p>
+            <br>
+    {% endfor %}
+</div>

@@ -1,0 +1,63 @@
+<h1>UserDetail Page:</h1>
+
+<p>
+   <a href="/">Home</a>
+   <a href="/addticket/">AddTicket</a>
+   <a href="/logout/">Logout</a>
+</p>
+<br>
+
+<h3>Tickets Created By {{user.username}}:</h3>
+{% for ticket in created_tickets %}
+   <h4>Title: <a href="/ticketdetail/{{ticket.id}}/">{{ticket.title}}</a></h4>
+   <p>Time: {{ticket.time}}</p>
+   <p>Description: {{ticket.description}}</p>
+   <p>
+      Created By: 
+      <a href="/userdetail/{{ticket.created_by.id}}">
+         {{ticket.created_by}}
+      </a>
+   </p>
+   <p>Status: {{ticket.choose_stat}}</p>
+   <p>Assigned To: {{ticket.user_assigned_to_ticket}}</p>
+   <p>Completed By: {{ticket.user_completed_ticket}}</p>
+   <br>
+{% endfor %}
+
+
+<h3>Tickets Completed By {{user.username}}:</h3>
+{% for ticket in completed_tickets %}
+   <h4>Title: <a href="/ticketdetail/{{ticket.id}}/">{{ticket.title}}</a></h4>
+   <p>Time: {{ticket.time}}</p>
+   <p>Description: {{ticket.description}}</p>
+   <p>
+      Created By: 
+      <a href="/userdetail/{{ticket.created_by.id}}">
+         {{ticket.created_by}}
+      </a>
+   </p>
+   <p>Status: {{ticket.choose_stat}}</p>
+   <p>Assigned To: {{ticket.user_assigned_to_ticket}}</p>
+   <p>Completed By: {{ticket.user_completed_ticket}}</p>
+   <br>
+{% endfor %}
+
+
+<h3>Tickets In Progress By: {{user.username}}:</h3>
+{% for ticket in assigned_tickets %}
+   <h4>Title: <a href="/ticketdetail/{{ticket.id}}/">{{ticket.title}}</a></h4>
+   <p>Time: {{ticket.time}}</p>
+   <p>Description: {{ticket.description}}</p>
+   <p>
+      Created By: 
+      <a href="/userdetail/{{ticket.created_by.id}}">
+         {{ticket.created_by}}
+      </a>
+   </p>
+   <p>Status: {{ticket.choose_stat}}</p>
+   <p>Assigned To: {{ticket.user_assigned_to_ticket}}</p>
+   <p>Completed By: {{ticket.user_completed_ticket}}</p>
+   <br>
+{% endfor %}
+
+

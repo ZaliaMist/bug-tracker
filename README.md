@@ -1,3 +1,6 @@
+<!-- Thank You so much Kyle, Tianna and Manny! -->
+
+
 It's important to focus on more things that Django is good at... that may not be immediately obvious as projects that make good websites. When working on any project of reasonable size, bug reports and feature requests are going to come in faster than you can work on them (or keep them in your head). Eventually, you'll start forgetting them unless you have a place to write them down... and why not make that a little more full-featured while you go?
 
 #### **Your Task**
