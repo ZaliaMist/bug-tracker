@@ -28,6 +28,7 @@ def homepage_view(request):
         }
     )
 
+
 # @login_required
 def edit_ticket_view(request, ticket_id):
     item = TicketM.objects.get(id=ticket_id)
@@ -150,3 +151,4 @@ def login_view(request):
 def logout_view(request):
    logout(request)
    return redirect("home")
+
